@@ -18,6 +18,7 @@ const xss = require("xss");
 const hpp = require("hpp");
 
 const app = express();
+app.set('trust proxy', 1);
 const port = Number(process.env.PORT) || 3000;
 const isProduction = process.env.NODE_ENV === "production";
 const appName = "LA SANTI Gomme srl";
