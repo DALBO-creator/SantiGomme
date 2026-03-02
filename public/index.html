@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icon/android-chrome-512x512.png">
+<link rel="manifest" href="img/icon/site.webmanifest">
+<meta name="theme-color" content="#F0F4F9">
+<meta name="description" content="LA SANTI Gomme srl a Travagliato (BS). Cambio gomme, riparazione pneumatici, equilibratura, deposito gomme. Prenota online!">
+<meta name="keywords" content="gommista, Travagliato, cambio gomme, riparazione pneumatici, deposito gomme, equilibratura, convergenza">
+<meta name="robots" content="index, follow">
+<title>LA SANTI Gomme srl | Gommista Travagliato (BS)</title>
+<link rel="canonical" href="https://www.lasantigomme.it/">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
 {
@@ -53,369 +74,16 @@
   }
 }
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="img/icon/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="img/icon/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="img/icon/android-chrome-512x512.png">
-<link rel="manifest" href="img/icon/site.webmanifest">
-<meta name="theme-color" content="#F0F4F9">
-<meta name="description" content="LA SANTI Gomme srl a Travagliato (BS). Cambio gomme, riparazione pneumatici, equilibratura, deposito gomme. Prenota online!">
-<meta name="keywords" content="gommista, Travagliato, cambio gomme, riparazione pneumatici, deposito gomme, equilibratura, convergenza">
-<meta name="robots" content="index, follow">
-<title>LA SANTI Gomme srl | Gommista Travagliato (BS)</title>
-<link rel="canonical" href="https://www.lasantigomme.it/">
-
-
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-/* ==============================
-   VARIABILI TEMA
-============================== */
-
-:root {
-    --bg: #F0F4F9;
-    --text: #1a1a1a;
-    --card-bg: #ffffff;
-    --border: #E1E4E8;
-    --hero-grad-1: #ffffff;
-    --hero-grad-2: #e9f3ff;
-}
-
-body.dark-mode {
-    --bg: #243254;
-    --text: #e2e8f0;
-    --card-bg: #324775c8;
-    --border: #4a5a72;
-    --hero-grad-1: #394e80;
-    --hero-grad-2: #1e293b;
-}
-body.dark-mode .bg-white {
-    background-color: #324775c8 !important; /* leggermente più chiaro dello sfondo dark */
-}
-
-/* ==========================
-   FORM IN DARK MODE
-========================== */
-
-body.dark-mode .form-control,
-body.dark-mode .form-control:focus {
-    background-color: #4c618fc8; /* stesso colore card più chiaro */
-    color: var(--text);
-    border: 1px solid var(--border);
-}
-
-
-
-/* ==============================
-   TRANSIZIONE UNIFORME GLOBALE
-============================== */
-
-body,
-body * {
-    transition:
-        background-color 0.35s ease,
-        color 0.35s ease,
-        border-color 0.35s ease;
-}
-
-/* ==============================
-   STILE GENERALE
-============================== */
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    scroll-behavior: smooth;
-}
-
-h1, h2, h3 {
-    font-weight: 600;
-}
-
-.sezione {
-    padding: 80px 0;
-}
-
-/* ==============================
-   NAVBAR
-============================== */
-
-.navbar-glass {
-    background-color: var(--card-bg);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-}
-
-.nav-link {
-    color: var(--text);
-}
-
-/* ==============================
-   HERO
-============================== */
-
-.hero {
-    background: linear-gradient(
-        135deg,
-        var(--hero-grad-1),
-        var(--hero-grad-2)
-    );
-    padding: 120px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-}
-
-/* ==============================
-   BOTTONI
-============================== */
-
-.btn-primario {
-    background: linear-gradient(90deg, #007BFF, #4da3ff);
-    border: none;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 30px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.btn-primario:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,123,255,0.3);
-}
-
-/* ==============================
-   CARD SERVIZI
-============================== */
-
-.card-servizio {
-    background-color: var(--card-bg);
-    color: var(--text);
-    border-radius: 10px;
-    border: 1px solid var(--border);
-}
-
-.card-servizio:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-}
-
-.card-servizio img {
-    width: 60px;        /* larghezza SVG */
-    height: 60px;       /* altezza SVG */
-    object-fit: contain;
-    display: block;     /* necessario per il margin auto */
-    margin: 0 auto 15px auto; /* centra l'immagine e aggiunge spazio sotto */
-}
-
-/* ==============================
-   RECENSIONI CARD
-============================== */
-
-.recensione-card {
-    background-color: var(--card-bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    text-align: left;
-}
-
-.recensione-card .stars {
-    font-size: 1.25rem;
-    color: #FFC107; /* colore stella gialla */
-    letter-spacing: 1px;
-}
-
-.recensione-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-
-/* ==============================
-   SEZIONI BIANCHE
-============================== */
-
-.bg-white {
-    background-color: var(--card-bg) !important;
-}
-
-/* ==============================
-   MARCHI
-============================== */
-
-.logo-marchio {
-    opacity: 0.7;
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-    max-width: 40%;
-    max-height: 40%;
-    object-fit: contain;
-}
-
-.logo-marchio:hover {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-/* ==============================
-   PERCHE SCEGLIERCI STILE
-============================== */
-
-.sezione h5.highlight {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.sezione h5.highlight::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background: #007BFF; /* linea blu sotto il titolo */
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    border-radius: 2px;
-}
-
-.sezione p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--text);
-}
-
-/* Dark mode */
-body.dark-mode .sezione.bg-white h5,
-body.dark-mode .sezione.bg-white p {
-    color: #ffffff;
-}
-
-
-
-/* ==============================
-   CONTATTI
-============================== */
-
-.box-mappa {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Tabella Orari */
-.orari-table {
-    background-color: var(--card-bg);
-    color: var(--text);
-    border-color: var(--border);
-    max-width: 400px;
-}
-
-.orari-table td {
-    padding: 10px 12px;
-    border-color: var(--border);
-}
-
-.orari-table td:first-child {
-    width: 40%;
-}
-
-body.dark-mode .orari-table {
-    background-color: var(--card-bg);
-    color: var(--text);
-}
-
-body.dark-mode .orari-table td {
-    border-color: var(--border);
-}
-
-body.dark-mode .orari-table .table-secondary {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-/* ==============================
-   FOOTER MIGLIORATO
-============================== */
-
-.footer-sezione {
-    background-color: var(--card-bg); /* coerente con bg-white */
-    padding: 40px 0;
-}
-
-.footer-sezione h5,
-.footer-sezione h6 {
-    margin-bottom: 0.5rem;
-}
-
-.footer-sezione p {
-    margin-bottom: 0.25rem;
-}
-
-.footer-sezione a.footer-social {
-    color: #34495e; /* colore icone social su bg bianco */
-    transition: color 0.3s ease;
-}
-
-.footer-sezione a.footer-social:hover {
-    color: #007BFF; /* effetto hover blu come bottoni */
-    text-decoration: none;
-}
-
-.footer-sezione hr {
-    opacity: 0.2;
-}
-
-/* ===== DARK MODE FOOTER ===== */
-body.dark-mode .footer-sezione {
-    background-color: var(--card-bg); /* card-bg scuro della dark mode */
-}
-body.dark-mode .footer-sezione h6,
-body.dark-mode .footer-sezione p,
-body.dark-mode .footer-sezione .text-secondary,
-body.dark-mode .footer-sezione .small {
-    color: #ffffff !important; /* tutti i testi bianchi */
-}
-
-body.dark-mode .footer-sezione a.footer-social {
-    color: #ffffff; /* icone social bianche su dark bg */
-}
-
-body.dark-mode .footer-sezione a.footer-social:hover {
-    color: #4da3ff; /* blu accento hover */
-}
-
-body.dark-mode .footer-sezione hr {
-    border-color: #ffffff; /* linea hr bianca */
-}
-
-</style>
+<link rel="stylesheet" href="index.css">
 </head>
 
-<body>
-
-<!-- ==============================
-     NAVBAR
-============================== -->
+<body id="top-reference">
+<!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-glass sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="#">LA SANTI Gomme srl</a>
+    <a class="navbar-brand fw-bold text-primary" href="#top-reference">LA SANTI Gomme srl</a>
     
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+    <button aria-label="toggle navbar button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="menuNavbar">
@@ -424,28 +92,49 @@ body.dark-mode .footer-sezione hr {
         <li class="nav-item"><a class="nav-link" href="#marchi">Marchi</a></li>
         <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
       </ul>
-      <button id="toggleTema" class="btn me-3">🌙</button>
       </div>
       
     
   </div>
 </nav>
 
-<!-- ==============================
-     HERO
-============================== -->
+<main>
+<!-- Hero -->
 
-<section class="hero">
-  <div class="container">
-    <h1>La sicurezza dei tuoi viaggi parte da qui</h1>
-    <p class="lead mt-3 mb-4">Servizi professionali per pneumatici a Travagliato (BS). Tecnologia, precisione e affidabilità.</p>
-    <a href="#contatti" class="btn btn-primario">Prenota un appuntamento</a>
+<section id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="img/carousel/carousel1.jpg" class="d-block w-100 hero-img" alt="Officina LA SANTI Gomme srl">
+    </div>
+
+    <div class="carousel-item">
+      <img src="img/carousel/carousel2.jpg" class="d-block w-100 hero-img" alt="Tecnologia all'avanguardia per pneumatici">
+    </div>
+
   </div>
+
+  <!-- overlay contenuto hero -->
+  <div class="hero-overlay">
+    <div class="container text-center">
+      <h1>La sicurezza dei tuoi viaggi parte da qui</h1>
+      <p class="lead mt-3 mb-4">
+        Servizi professionali per pneumatici a Travagliato (BS). Tecnologia, precisione e affidabilità.
+      </p>
+      <a href="#contatti" class="btn btn-primario">Prenota un appuntamento</a>
+    </div>
+  </div>
+
+  <!-- controlli -->
+  <button aria-label="carousel previous" class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button aria-label="carousel next" class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 </section>
 
-<!-- ==============================
-     SERVIZI
-============================== -->
+<!-- Servicies -->
 
 <section id="servizi" class="sezione">
   <div class="container text-center">
@@ -455,7 +144,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-3">
         <div class="card card-servizio p-4 h-100">
           <img src="img/servizi/gomma.svg" class="card-img-top" alt="Cambio Gomme" loading="lazy">
-          <h5>Cambio Gomme Stagionale</h5>
+          <h3>Cambio Gomme Stagionale</h3>
           <p>Montaggio e smontaggio pneumatici estivi e invernali.</p>
         </div>
       </div>
@@ -463,7 +152,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-3">
         <div class="card card-servizio p-4 h-100">
             <img src="img/servizi/riparazione.svg" class="card-img-top" alt="Riparazione Pneumatici" loading="lazy">
-          <h5>Riparazione Pneumatici</h5>
+          <h3>Riparazione Pneumatici</h3>
           <p>Interventi rapidi su forature e danni comuni.</p>
         </div>
       </div>
@@ -471,7 +160,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-3">
         <div class="card card-servizio p-4 h-100">
               <img src="img/servizi/volante.svg" class="card-img-top" alt="Equilibratura e Convergenza" loading="lazy">
-          <h5>Equilibratura e Convergenza</h5>
+          <h3>Equilibratura e Convergenza</h3>
           <p>Assetto preciso per una guida sicura e stabile.</p>
         </div>
       </div>
@@ -479,7 +168,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-3">
         <div class="card card-servizio p-4 h-100">
           <img src="img/servizi/deposito.svg" class="card-img-top" alt="Deposito Gomme" loading="lazy">
-          <h5>Deposito Gomme</h5>
+          <h3>Deposito Gomme</h3>
           <p>Custodia sicura dei tuoi pneumatici fuori stagione.</p>
         </div>
       </div>
@@ -489,9 +178,7 @@ body.dark-mode .footer-sezione hr {
 </section>
 
 
-<!-- ==============================
-     MARCHI
-============================== -->
+<!-- Logos -->
 
 <section id="marchi" class="sezione bg-white">
   <div class="container text-center">
@@ -505,26 +192,24 @@ body.dark-mode .footer-sezione hr {
   </div>
 </section>
 
-<!-- ==============================
-     PERCHE SCEGLIERCI
-============================== -->
+<!-- Why us -->
 <section class="sezione">
   <div class="container text-center">
     <h2 class="mb-5">Perché Sceglierci</h2>
     <div class="row g-4 justify-content-center">
 
       <div class="col-md-4">
-        <h5 class="fw-bold mb-2 highlight">Professionalità Certificata</h5>
+        <h3 class="fw-bold mb-2 highlight">Professionalità Certificata</h3>
         <p>Personale qualificato e preparato, pronto a offrire servizi sicuri e affidabili per ogni tipo di pneumatico.</p>
       </div>
 
       <div class="col-md-4">
-        <h5 class="fw-bold mb-2 highlight">Tecnologia All'Avanguardia</h5>
+        <h3 class="fw-bold mb-2 highlight">Tecnologia All'Avanguardia</h3>
         <p>Strumenti moderni e tecniche precise per interventi rapidi e accurati, sempre al passo con le ultime innovazioni.</p>
       </div>
 
       <div class="col-md-4">
-        <h5 class="fw-bold mb-2 highlight">Rapidità e Puntualità</h5>
+        <h3 class="fw-bold mb-2 highlight">Rapidità e Puntualità</h3>
         <p>Servizio veloce e puntuale, senza compromessi sulla qualità, per farti tornare subito in strada in sicurezza.</p>
       </div>
 
@@ -532,9 +217,7 @@ body.dark-mode .footer-sezione hr {
   </div>
 </section>
 
-<!-- ==============================
-     RECENSIONI
-============================== -->
+<!-- Reviews -->
 <section id="recensioni" class="sezione bg-white">
   <div class="container text-center">
     <h2 class="mb-5">Cosa Dicono i Nostri Clienti</h2>
@@ -544,7 +227,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-4">
         <div class="card recensione-card p-4 h-100">
           <div class="stars mb-2">⭐️⭐️⭐️⭐️⭐️</div>
-          <h5>Marco P.</h5>
+          <h3>Marco P.</h3>
           <p>"Un gesto che va ben oltre la professionalità e non è da tutti. Grazie mille."</p>
         </div>
       </div>
@@ -553,7 +236,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-4">
         <div class="card recensione-card p-4 h-100">
           <div class="stars mb-2">⭐️⭐️⭐️⭐️⭐️</div>
-          <h5>Antonio C.</h5>
+          <h3>Antonio C.</h3>
           <p>"Accoglienza rapida con servizio efficiente! Mi ci sono recato per una convergenza ed il servizio è stato rapido e a prezzo più che onesto!"</p>
         </div>
       </div>
@@ -562,7 +245,7 @@ body.dark-mode .footer-sezione hr {
       <div class="col-md-6 col-lg-4">
         <div class="card recensione-card p-4 h-100">
           <div class="stars mb-2">⭐️⭐️⭐️⭐️⭐️</div>
-          <h5>Andrea P.</h5>
+          <h3>Andrea P.</h3>
           <p>"Servizio di emergenza veloce e prezioso, non posso che ringraziare."</p>
         </div>
       </div>
@@ -571,122 +254,121 @@ body.dark-mode .footer-sezione hr {
   </div>
 </section>
 
-<!-- ==============================
-     CONTATTI
-============================== -->
+<!-- Contacts -->
 
 <section id="contatti" class="sezione">
   <div class="container">
-    <div class="row g-4">
 
+    <!-- RIGA 1 -->
+    <div class="row g-4">
+      <!-- FORM (alto sinistra) -->
+      <div class="col-md-6">
+        <h3>Inviaci un messaggio</h3>
+        <form id="formContatti" novalidate>
+
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome *</label>
+            <input type="text" class="form-control" id="nome" name="nome" required 
+              minlength="2" maxlength="100" 
+              pattern="[a-zA-ZàèéìòùÀÈÉÌÒÙ\s'-]+"
+              placeholder="Il tuo nome">
+            <div class="invalid-feedback">Inserisci un nome valido.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" name="email" required
+              placeholder="tuaemail@esempio.it">
+            <div class="invalid-feedback">Inserisci un'email valida.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="messaggio" class="form-label">Messaggio *</label>
+            <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required
+              minlength="10" maxlength="2000"
+              placeholder="Scrivi il tuo messaggio..."></textarea>
+            <div class="invalid-feedback">Messaggio non valido.</div>
+            <small class="text-muted"><span id="charCount">0</span>/2000</small>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="privacy" required>
+            <label class="form-check-label" for="privacy">
+              Accetto la <a href="privacy.html">Privacy Policy</a> *
+            </label>
+            <div class="invalid-feedback">Devi accettare.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primario">
+            Invia messaggio
+          </button>
+        </form>
+
+        <div id="rispostaForm" class="mt-3"></div>
+      </div>
+
+      <!-- CONTATTI (alto destra) -->
       <div class="col-md-6">
         <h2>Contatti</h2>
-        <p><strong>Indirizzo:</strong> Via della Scienza, 6, 25039 Travagliato (BS)</p>
+        <p><strong>Indirizzo:</strong> Via della Scienza, 6, Travagliato</p>
         <p><strong>Telefono:</strong> 0306864669</p>
         <p><strong>Email:</strong> info@lasantigomme.it</p>
-        
-        <h5 class="mt-4 mb-3">Orari di Apertura</h5>
-        <table class="table table-sm table-bordered orari-table">
+      </div>
+    </div>
+
+    <!-- RIGA 2 -->
+    <div class="row g-4 mt-2">
+
+      <!-- ORARI (basso sinistra) -->
+      <div class="col-md-6">
+        <h3>Orari di Apertura</h3>
+        <table class="table table-sm table-bordered">
           <tbody>
-            <tr>
-              <td><strong>Lunedì</strong></td>
-              <td>08:00-12:00 | 14:00-18:00</td>
-            </tr>
-            <tr>
-              <td><strong>Martedì</strong></td>
-              <td>08:00-12:00 | 14:00-18:00</td>
-            </tr>
-            <tr>
-              <td><strong>Mercoledì</strong></td>
-              <td>08:00-12:00 | 14:00-18:00</td>
-            </tr>
-            <tr>
-              <td><strong>Giovedì</strong></td>
-              <td>08:00-12:00 | 14:00-18:00</td>
-            </tr>
-            <tr>
-              <td><strong>Venerdì</strong></td>
-              <td>08:00-12:00 | 14:00-18:00</td>
-            </tr>
-            <tr>
-              <td><strong>Sabato</strong></td>
-              <td>08:00-12:00</td>
-            </tr>
-            <tr class="table-secondary">
-              <td><strong>Domenica</strong></td>
-              <td><em>Chiuso</em></td>
-            </tr>
+            <tr><td>Lunedì</td><td>08-12 | 14-18</td></tr>
+            <tr><td>Martedì</td><td>08-12 | 14-18</td></tr>
+            <tr><td>Mercoledì</td><td>08-12 | 14-18</td></tr>
+            <tr><td>Giovedì</td><td>08-12 | 14-18</td></tr>
+            <tr><td>Venerdì</td><td>08-12 | 14-18</td></tr>
+            <tr><td>Sabato</td><td>08-12</td></tr>
+            <tr class="table-secondary"><td>Domenica</td><td>Chiuso</td></tr>
           </tbody>
         </table>
       </div>
 
+      <!-- MAPPA (basso destra) -->
       <div class="col-md-6">
-        <div class="box-mappa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d715475.324044303!2d8.884974178125013!3d45.53371730000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781717fa6299395%3A0x2fe7144d1105944a!2sLA%20SANTI%20Gomme%20srl%20KwikFit!5e0!3m2!1sit!2sit!4v1771970920007!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>Dove trovarci</h3>
+        <div class="map-container" style="height:100%;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d715475.324044303!2d8.884974178125013!3d45.53371730000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781717fa6299395%3A0x2fe7144d1105944a!2sLA%20SANTI%20Gomme%20srl%20KwikFit!5e0!3m2!1sit!2sit!4v1771970920007!5m2!1sit!2sit"
+            title="Mappa di LA SANTI Gomme srl a Travagliato"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
 
     </div>
-    <form id="formContatti" novalidate>
-  <div class="mb-3 mt-4">
-    <label for="nome" class="form-label">Nome *</label>
-    <input type="text" class="form-control" id="nome" name="nome" required 
-           minlength="2" maxlength="100" 
-           pattern="[a-zA-ZàèéìòùÀÈÉÌÒÙ\s'-]+"
-           placeholder="Il tuo nome">
-    <div class="invalid-feedback">Inserisci un nome valido (2-100 caratteri).</div>
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Email *</label>
-    <input type="email" class="form-control" id="email" name="email" required
-           placeholder="tuaemail@esempio.it">
-    <div class="invalid-feedback">Inserisci un indirizzo email valido.</div>
-  </div>
-  <div class="mb-3">
-    <label for="messaggio" class="form-label">Messaggio *</label>
-    <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required
-              minlength="10" maxlength="2000"
-              placeholder="Scrivi il tuo messaggio..."></textarea>
-    <div class="invalid-feedback">Il messaggio deve contenere tra 10 e 2000 caratteri.</div>
-    <small class="text-muted"><span id="charCount">0</span>/2000 caratteri</small>
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required>
-    <label class="form-check-label" for="privacy">
-      Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a> *
-    </label>
-    <div class="invalid-feedback">Devi accettare la privacy policy per procedere.</div>
-  </div>
-  <button type="submit" class="btn btn-primario" id="submitBtn">
-    <span id="submitText">Invia messaggio</span>
-    <span id="submitSpinner" class="spinner-border spinner-border-sm ms-2" style="display: none;"></span>
-  </button>
-</form>
-
-<div id="rispostaForm" class="mt-3"></div>
-
-
   </div>
 </section>
 
+</main>
 
-
-<!-- ==============================
-     FOOTER MIGLIORATO
-============================== -->
+<!-- Footer -->
 <footer class="footer-sezione py-5 bg-white">
   <div class="container">
     <div class="row text-center text-md-start align-items-center">
       
       <!-- Logo e descrizione -->
       <div class="col-md-4 mb-4 mb-md-0">
-        <h5 class="text-primary fw-bold">LA SANTI Gomme srl</h5>
+        <h3 class="text-primary fw-bold">LA SANTI Gomme srl</h3>
         <p class="text-secondary small">Servizi professionali per pneumatici a Travagliato (BS). Montaggio, riparazione, deposito e molto altro.</p>
       </div>
       
       <!-- Contatti -->
       <div class="col-md-4 mb-4 mb-md-0">
-        <h6 class="text-dark fw-semibold">Contatti</h6>
+        <h4 class="text-dark fw-semibold">Contatti</h4>
         <p class="text-secondary small mb-1"><strong>Telefono:</strong> 0306864669</p>
         <p class="text-secondary small mb-1"><strong>Email:</strong> info@lasantigomme.it</p>
         <p class="text-secondary small mb-0"><strong>Indirizzo:</strong> Via della Scienza, 6, 25039 Travagliato (BS)</p>
@@ -694,10 +376,16 @@ body.dark-mode .footer-sezione hr {
       
       <!-- Social -->
       <div class="col-md-4 text-center text-md-end">
-        <h6 class="text-dark fw-semibold mb-2">Seguici</h6>
-        <a href="#" class="footer-social me-3 fs-5"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="footer-social me-3 fs-5"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="footer-social fs-5"><i class="bi bi-whatsapp"></i></a>
+        <h4 class="text-dark fw-semibold mb-2">Seguici</h4>
+        <a href="#" class="footer-social me-3 fs-5" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="footer-social me-3 fs-5" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="footer-social fs-5" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
       </div>
       
     </div>
@@ -718,9 +406,7 @@ body.dark-mode .footer-sezione hr {
   </div>
 </footer>
 
-<!-- ==============================
-     COOKIE CONSENT BANNER (GDPR)
-============================== -->
+<!-- Cookies Banner -->
 <div id="cookieBanner" class="cookie-banner" style="display: none;">
   <div class="cookie-content">
     <p>
@@ -736,74 +422,9 @@ body.dark-mode .footer-sezione hr {
   </div>
 </div>
 
-<style>
-/* Cookie Banner Styles */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--card-bg);
-  border-top: 1px solid var(--border);
-  padding: 20px;
-  z-index: 9999;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
-}
-
-.cookie-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.cookie-content p {
-  margin: 0;
-  flex: 1;
-  min-width: 300px;
-  font-size: 0.9rem;
-}
-
-.cookie-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  .cookie-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .cookie-buttons {
-    justify-content: center;
-  }
-}
-</style>
-
-<!-- Aggiungi Bootstrap Icons per social -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-<style>
-
-.footer-sezione a {
-    color: #e2e8f0;
-    transition: color 0.3s ease;
-}
-
-.footer-sezione a:hover {
-    color: #4da3ff; /* colore hover dei link */
-    text-decoration: none;
-}
-</style>
-
-<!-- Bootstrap Bundle JS (con Popper incluso) -->
+<!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
 <script src="index.js"></script>
-
-
 </body>
 </html>
