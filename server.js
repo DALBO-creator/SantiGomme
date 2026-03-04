@@ -170,8 +170,19 @@ const contactValidators = [
     .trim()
     .notEmpty()
     .withMessage("Il messaggio è obbligatorio.")
-    .isLength({ min: 10, max: 2000 })
-    .withMessage("Il messaggio deve essere tra 10 e 2000 caratteri."),
+    .isLength({ min: 1, max: 2000 })
+    .withMessage("Il messaggio deve essere tra 1 e 2000 caratteri."),
+  body("telefono")
+    .optional()
+    .isString()
+    .trim()
+    .custom((value) => {
+      const numeroSoloDigit = value.replace(/\D/g, "");
+      if (numeroSoloDigit.length < 10) {
+        throw new Error("Il numero di telefono deve contenere almeno 10 cifre.");
+      }
+      return true;
+    })
 ];
 
 app.post("/api/contatti", contactLimiter, contactValidators, async (req, res, next) => {
@@ -189,6 +200,17 @@ app.post("/api/contatti", contactLimiter, contactValidators, async (req, res, ne
     const nome = sanitizeText(data.nome);
     const email = sanitizeText(data.email);
     const messaggio = sanitizeText(data.messaggio);
+    const telefono = data.telefono ? sanitizeText(data.telefono) : null;
+    
+    // Genera link WhatsApp se il telefono è presente
+    let whatsappLink = "";
+    if (telefono) {
+      // Rimuovi tutti i caratteri non numerici eccetto il +
+      const telefonoClean = telefono.replace(/[^\d+]/g, "");
+      // Rimuovi il + iniziale per il link WhatsApp (wa.me non lo accetta)
+      const numeroWhatsApp = telefonoClean.replace(/^\+/, "");
+      whatsappLink = `https://wa.me/${numeroWhatsApp}`;
+    }
 
     await resend.emails.send({
       from: `${appName} <onboarding@resend.dev>`,
@@ -202,6 +224,7 @@ app.post("/api/contatti", contactLimiter, contactValidators, async (req, res, ne
         "",
         `Nome: ${nome}`,
         `Email: ${email}`,
+        whatsappLink ? `WhatsApp: ${whatsappLink}` : "",
         `Data: ${new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" })}`,
         "",
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
@@ -209,7 +232,7 @@ app.post("/api/contatti", contactLimiter, contactValidators, async (req, res, ne
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
         "",
         messaggio,
-      ].join("\n"),
+      ].filter(line => line !== "").join("\n"),
     });
 
     logEvent("INFO", "Email inviata con successo", {

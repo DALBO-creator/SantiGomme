@@ -283,6 +283,15 @@
           </div>
 
           <div class="mb-3">
+            <label for="telefono" class="form-label">Telefono (opzionale)</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" 
+              pattern="[\d\s\+\-\(\)]+"
+              minlength="10"
+              placeholder="+39 333 1234567">
+            <div class="invalid-feedback">Inserisci un numero valido (almeno 10 cifre).</div>
+          </div>
+
+          <div class="mb-3">
             <label for="messaggio" class="form-label">Messaggio *</label>
             <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required
               minlength="10" maxlength="2000"
