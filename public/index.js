@@ -107,12 +107,31 @@ form.addEventListener("submit", async (e) => {
     submitSpinner.style.display = "inline-block";
 
     const dati = new FormData(form);
+    const telefono = dati.get("telefono")?.trim() || "";
+    
+    // Validazione telefono opzionale
+    if (telefono) {
+        const numeroSoloDigit = telefono.replace(/\D/g, "");
+        if (numeroSoloDigit.length < 10) {
+            risposta.className = "alert alert-warning mt-3";
+            risposta.textContent = "Il numero di telefono deve contenere almeno 10 cifre.";
+            submitBtn.disabled = false;
+            submitText.textContent = "Invia messaggio";
+            submitSpinner.style.display = "none";
+            return;
+        }
+    }
+    
     const obj = {
         nome: dati.get("nome"),
         email: dati.get("email"),
-        messaggio: dati.get("messaggio"),
-        telefono: dati.get("telefono")
+        messaggio: dati.get("messaggio")
     };
+    
+    // Aggiungi telefono solo se presente
+    if (telefono) {
+        obj.telefono = telefono;
+    }
 
     try {
         const res = await fetch("/api/contatti", {

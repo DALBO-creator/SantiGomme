@@ -238,8 +238,15 @@ Response
 |-------|------|-------------|
 | Nome | text | 2-100 caratteri, solo lettere |
 | Email | email | Formato email valido |
+| Telefono | tel | Opzionale, min 10 cifre se presente |
 | Messaggio | textarea | 10-2000 caratteri |
 | Privacy | checkbox | Obbligatorio |
+
+**Note sul campo Telefono:**
+- Campo opzionale (non obbligatorio)
+- Se compilato, deve contenere almeno 10 cifre numeriche
+- Accetta formati con prefissi internazionali (es: +39)
+- Se presente, viene generato un link WhatsApp nell'email inviata
 
 ### Cookie Consent
 - Banner conforme GDPR
@@ -312,9 +319,12 @@ Content-Type: application/json
 {
   "nome": "Mario Rossi",
   "email": "mario.rossi@esempio.it",
+  "telefono": "+39 333 1234567",
   "messaggio": "Vorrei prenotare un cambio gomme..."
 }
 ```
+
+**Note:** Il campo `telefono` è opzionale. Se fornito, deve contenere almeno 10 cifre e viene utilizzato per generare un link WhatsApp nell'email.
 
 #### Response (Successo)
 ```json
@@ -383,6 +393,7 @@ Health check endpoint per monitoring.
 |------|----------|----------------|---------------|
 | Nome | Risposta contatto | Consenso | 24 mesi |
 | Email | Risposta contatto | Consenso | 24 mesi |
+| Telefono | Risposta contatto (opzionale) | Consenso | 24 mesi |
 | Messaggio | Risposta contatto | Consenso | 24 mesi |
 | IP | Sicurezza/Log | Legittimo interesse | Server logs |
 
